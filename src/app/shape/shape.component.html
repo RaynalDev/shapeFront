@@ -1,0 +1,34 @@
+
+  @for( shape of shapes; track shape.id){
+
+
+@if(shape.formsTypeId === 2){
+    <div [style]="getRectangleStyle(shape)" (click)="showPopup(shape.text)"></div>
+    }
+
+@if(shape.formsTypeId === 1){
+    <div [style]="getCircleStyle(shape)" (click)="showPopup(shape.text)"></div>
+    }
+
+@if(shape.formsTypeId === 3){
+<div [style]="getTextStyle(shape)" (click)="showPopup(shape.text)"></div>
+}
+
+
+@if(shape.formsTypeId === 3){
+    <div>
+    <span [style]="{ fontSize: '40px', fontFamily: 'Arial' }">
+        {{ shape.text }}
+    </span>
+    
+</div>
+}
+}
+
+@if (popupText) {
+
+    <div  class="popup">
+      {{ popupText }}
+    </div>
+
+}
