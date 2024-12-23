@@ -35,6 +35,7 @@ getRectangleStyle(shape: Shape) {
     width: `${shape.width}px`,
     height: `${shape.height}px`,
     border: '1px solid black',
+    // backgroundColor: 'white',  !! dans la consigne mais ne permet pas l'affichage du portrait complet
     backgroundColor: ''
   };
 }
@@ -48,6 +49,7 @@ getCircleStyle(shape: Shape) {
     height: `${shape.width}px`, 
     border: '1px solid black',
     borderRadius: '50%',
+    // backgroundColor: 'white',  !! dans la consigne mais ne permet pas l'affichage du portrait complet
     backgroundColor: ''
   };
 }
@@ -57,7 +59,6 @@ getTextStyle(shape: Shape) {
     position: 'absolute',
     top: `${shape.positionY}px`,
     left: `${shape.positionX}px`,
-    transform: 'translate(-50%, -50%)', 
     fontSize: '40px',
     fontFamily: 'Arial',
     textAlign: 'center' 
